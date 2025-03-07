@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const favSchema = new mongoose.Schema({
-  movieID: {
+  movieId: {
     type: String,
     required: true,
   },
@@ -29,7 +29,7 @@ const favSchema = new mongoose.Schema({
 
 const userSchema = new mongoose.Schema(
   {
-    clerkID: {
+    clerkId: {
       type: String,
       required: true,
       unique: true,
