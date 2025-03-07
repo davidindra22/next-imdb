@@ -9,7 +9,7 @@ export const connect = async () => {
   }
   try {
     await mongoose.connect(process.env.MONGODB_URI, {
-      dbName: "next-imdb-clerk",
+      dbName: "next-imbd-clerk",
       userNewUrlParser: true,
       useUnifiedTopology: true,
     });
