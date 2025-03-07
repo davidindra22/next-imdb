@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-import { initialize } from "next/dist/server/lib/render-server";
+
 let initalized = false;
 export const connect = async () => {
   mongoose.set("strictQuery", true);
-  if (initialize) {
+  if (initalized) {
     console.log("mongoDB already connected");
     return;
   }
