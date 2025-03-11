@@ -2,7 +2,7 @@ import User from "@/lib/models/user.model";
 import { connect } from "../mongodb/mongoose";
 export const createOrUpdateUser = async (
   id,
-  firts_name,
+  first_name,
   last_name,
   image_url,
   email_addresses
@@ -13,9 +13,9 @@ export const createOrUpdateUser = async (
       { clerkId: id },
       {
         $set: {
-          firtsName: firts_name,
+          firstName: first_name,
           lastName: last_name,
-          profilPicture: image_url,
+          profilePicture: image_url,
           email: email_addresses[0].email_addresses,
         },
       },

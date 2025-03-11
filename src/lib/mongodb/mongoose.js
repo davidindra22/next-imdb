@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
-let initalized = false;
+let initialized = false;
 export const connect = async () => {
   mongoose.set("strictQuery", true);
-  if (initalized) {
+  if (initialized) {
     console.log("mongoDB already connected");
     return;
   }
@@ -13,7 +13,7 @@ export const connect = async () => {
       userNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    initalized = true;
+    initialized = true;
     console.log("mongoDB connected");
   } catch (error) {
     console.log("mongoDB connection error :", error);
